@@ -1,0 +1,70 @@
+body {
+  background: linear-gradient(#e75984, #4ea6ea);
+  background-repeat: no-repeat;
+}
+p h6 {
+  font-family: "Nunito", sans-serif;
+  font-size: smaller;
+}
+.col {
+  font-family: "Nunito", sans-serif;
+}
+
+.form-control {
+  margin-bottom: 5px;
+}
+
+.City {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.Description {
+  text-align: center;
+}
+
+.Temperature {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  margin-bottom: 5px;
+  font-size: x-small;
+}
+
+.WholeApp {
+  max-width: 512px;
+  background-color: white;
+  border-radius: 12px;
+  margin: 50px auto 400px auto;
+  padding: 50px;
+  color: #4ea6ea;
+  font-size: normal;
+}
+
+.MainIcon {
+  margin: auto 40px auto 40px;
+}
+
+button {
+  border-radius: 100 px;
+  border-color: #4ea6ea;
+  border-width: 0px;
+  margin: 100px;
+  padding: 5px;
+  background-color: white;
+  color: #4ea6ea;
+  font-family: "Nunito", sans-serif;
+  transition: all 200ms ease-in-out;
+  text-decoration: underline;
+}
+button:hover {
+  background: lightsteelblue;
+  color: white;
+}
