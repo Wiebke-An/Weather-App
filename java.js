@@ -70,15 +70,26 @@ function showWeather(response) {
   weatherDescription.innerHTML = response.data.weather[0].description;
 
   let MinTempElement = Math.round(response.data.main.temp_min);
-  let CurMinTemp = document.querySelector("#Min");
-  CurMinTemp.innerHTML = `Min: ${MinTempElement} °C `;
-
   let MaxTempElement = Math.round(response.data.main.temp_max);
-  let CurMaxTemp = document.querySelector("#Max");
-  CurMaxTemp.innerHTML = `Max: ${MaxTempElement} °C `;
+  let HotCold = document.querySelector(".Minmax");
+  HotCold.innerHTML = `${MinTempElement} °C | ${MaxTempElement} °C`;
 
   let humidityElement = document.querySelector("#Rain");
   humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+  let WindElement = Math.round(response.data.wind.speed);
+  let WindSpeed = document.querySelector("Windspeed");
+  WindSpeed.innerHTML = `Wind: ${WindElement} km/h `;
+
+  let feelsLikeTemp = Math.round(response.data.main.feels_like);
+  let updatedFeelsLikeTemp = document.querySelector("Feelslike");
+  updatedFeelsLikeTemp.innerHTML = `Feels like: ${feelsLikeTemp} °C  `;
+
+  let IconElement = document.querySelector("Icon");
+  IconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 let CurTemp = document.querySelector("#entercity");
 CurTemp.addEventListener("submit", displayWeather);

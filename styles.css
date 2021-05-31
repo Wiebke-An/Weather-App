@@ -30,6 +30,10 @@ p h6 {
   font-weight: bolder;
 }
 
+.Minmax {
+  text-align: center;
+}
+
 ul {
   list-style: none;
 }
