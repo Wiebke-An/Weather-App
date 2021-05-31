@@ -78,14 +78,14 @@ function showWeather(response) {
   humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
   let WindElement = Math.round(response.data.wind.speed);
-  let WindSpeed = document.querySelector("Windspeed");
+  let WindSpeed = document.querySelector("#Windspeed");
   WindSpeed.innerHTML = `Wind: ${WindElement} km/h `;
 
   let feelsLikeTemp = Math.round(response.data.main.feels_like);
-  let updatedFeelsLikeTemp = document.querySelector("Feelslike");
+  let updatedFeelsLikeTemp = document.querySelector("#Feelslike");
   updatedFeelsLikeTemp.innerHTML = `Feels like: ${feelsLikeTemp} °C  `;
 
-  let IconElement = document.querySelector("Icon");
+  let IconElement = document.querySelector("#Icon");
   IconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
