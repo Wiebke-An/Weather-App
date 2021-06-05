@@ -15,25 +15,24 @@ p h6 {
 }
 
 .City {
-  text-align: center;
-  font-size: xx-large;
-  font-weight: 400;
-  margin-bottom: 5px;
-}
-.Description {
-  text-align: center;
+  color: #d66290;
 }
 
+.Description:first-letter {
+  text-transform: capitalize;
+}
+.overview:first-letter {
+  text-transform: capitalize;
+  line-height: 0%;
+}
 .Temperature {
-  text-align: center;
+  text-align: left;
   font-size: xx-large;
-  font-weight: bolder;
 }
 
-.Minmax {
+.weather-forecast {
   text-align: center;
 }
-
 ul {
   list-style: none;
 }
@@ -53,7 +52,8 @@ li {
 }
 
 .MainIcon {
-  margin: auto 40px auto 40px;
+  margin: auto;
+  padding-top: 10px;
 }
 
 button {
