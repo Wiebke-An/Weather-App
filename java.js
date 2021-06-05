@@ -147,10 +147,8 @@ function showWeather(response) {
   updatedFeelsLikeTemp.innerHTML = `Feels like: ${feelsLikeTemp} °C  `;
 
   let IconElement = document.querySelector("#Icon");
-  IconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+
+  IconElement.setAttribute("src", `icon/${response.data.weather[0].icon}.png`);
   getForecast(response.data.coord);
 }
 let CurTemp = document.querySelector("#entercity");
