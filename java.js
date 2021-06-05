@@ -68,7 +68,6 @@ function displayForecast(response) {
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
          <img
           src="icons/${forecastDay.weather[0].icon}"
-          alt=""
           width="5px"
         />
         <div class="weather-forecast-temperatures">
