@@ -134,11 +134,6 @@ function showWeather(response) {
   let weatherDescription = document.querySelector("#Description");
   weatherDescription.innerHTML = response.data.weather[0].description;
 
-  let MinTempElement = Math.round(response.data.main.temp_min);
-  let MaxTempElement = Math.round(response.data.main.temp_max);
-  let HotCold = document.querySelector(".Minmax");
-  HotCold.innerHTML = `${MinTempElement} °C | ${MaxTempElement} °C`;
-
   let humidityElement = document.querySelector("#Rain");
   humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
