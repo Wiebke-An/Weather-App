@@ -32,13 +32,52 @@ let months = [
 let currentMonth = months[now.getMonth()];
 
 let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 let currentYear = now.getFullYear();
 let today = now.getDate();
 
 pToday.innerHTML = `Today is ${currentDay}, ${currentMonth} ${today} ${currentYear}, ${hours}:${minutes}`;
 
+// Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+         <input
+              type="image"
+              src="icons/cloudy.png"
+              width="35px"
+            />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 // Change City & Search Enginge
+
 function SearchCity(event) {
   event.preventDefault();
   let SearchInput = document.querySelector("#CityInput");
@@ -93,3 +132,5 @@ function showWeather(response) {
 }
 let CurTemp = document.querySelector("#entercity");
 CurTemp.addEventListener("submit", displayWeather);
+
+displayForecast();

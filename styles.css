@@ -72,3 +72,7 @@ button:hover {
   background: lightsteelblue;
   color: white;
 }
+
+.weather-forecast-temperatures {
+  font-size: small;
+}
