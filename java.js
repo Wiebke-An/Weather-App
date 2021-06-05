@@ -42,7 +42,7 @@ if (minutes < 10) {
 let currentYear = now.getFullYear();
 let today = now.getDate();
 
-pToday.innerHTML = `Today is ${currentDay}, ${currentMonth} ${today} ${currentYear}, ${hours}:${minutes}`;
+pToday.innerHTML = `Last updated: ${currentDay}, ${currentMonth} ${today} ${currentYear}, ${hours}:${minutes}`;
 
 // Forecast
 
