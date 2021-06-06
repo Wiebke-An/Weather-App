@@ -27,7 +27,7 @@ p h6 {
 }
 .Temperature {
   text-align: left;
-  font-size: xx-large;
+  font-size: 37px;
 }
 
 .weather-forecast {
@@ -46,14 +46,13 @@ li {
   background-color: white;
   border-radius: 12px;
   margin: 50px auto 400px auto;
-  padding: 50px;
+  padding: 50px 50px 5px 50px;
   color: #4ea6ea;
   font-size: normal;
 }
 
 .MainIcon {
   margin: auto;
-  padding-top: 10px;
 }
 
 button {
@@ -75,4 +74,8 @@ button:hover {
 
 .weather-forecast-temperatures {
   font-size: small;
+}
+
+.Github {
+  font-size: xx-small;
 }
