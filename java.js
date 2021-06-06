@@ -121,6 +121,8 @@ function displayWeather(event) {
   axios.get(apiUrl).then(showWeather);
 }
 
+// Weather elements
+
 function showWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector(".Temperature");
